@@ -13,7 +13,7 @@ if __name__ == "__main__":
     yhat = model.predict(test_dataset)
     print(yhat)
     yhat = yhat.round()
-    ytrue = test_df.drop('ECG_ID', axis=1)
+    ytrue = test_df['A']
 
 
     report = classification_report(ytrue, yhat)

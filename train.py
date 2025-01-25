@@ -9,7 +9,7 @@ from ECGPyDataset import ECGPyDataset
 if __name__ == "__main__":
     # Optimization settings
     loss = 'binary_crossentropy'
-    lr = 0.001
+    lr = 0.0005
     batch_size = 16
     validation_split = 0.2
     opt = Adam(lr)
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     train_dataset = ECGPyDataset(df_train.iloc[:val_index], batch_size)
     val_dataset = ECGPyDataset(df_train.iloc[val_index:], batch_size)
 
-    model = get_model(11)
+    model = get_model(1)
     model.compile(loss=loss, optimizer=opt)
 
     # Create log

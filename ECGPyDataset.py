@@ -13,7 +13,7 @@ class ECGPyDataset(keras.utils.PyDataset):
         super().__init__(**kwargs)
 
         self.x = df.ECG_ID
-        self.y = df.drop('ECG_ID', axis=1)
+        self.y = df['A']
         self.batch_size = batch_size
 
     # Return number of batches
