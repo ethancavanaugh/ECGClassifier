@@ -17,9 +17,6 @@ if __name__ == "__main__":
     y_pred = pd.read_csv('eval/test_predictions.csv')['model_output']
     y_true = test_df['A']
 
-
-
-
     #Reciever operating curve
     fpr, tpr, thresholds = metrics.roc_curve(y_true, y_pred)
     df_roc = pd.DataFrame({'Threshold': thresholds, 'FPR': fpr, 'TPR': tpr})
