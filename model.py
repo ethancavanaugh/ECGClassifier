@@ -1,3 +1,11 @@
+"""
+MODEL CODE OBTAINED FROM:
+Ribeiro, A. H., Ribeiro, M. H., Paixão, G. M., Oliveira, D. M., Gomes, P. R., Canazart, J. A., Ferreira, M. P.,
+Andersson, C. R., Macfarlane, P. W., Meira, W., Schön, T. B., & Ribeiro, A. L. (2020).
+Automatic diagnosis of the 12-lead ECG using a deep neural network. Nature Communications, 11(1).
+https://doi.org/10.1038/s41467-020-15432-4
+"""
+
 from tensorflow.keras.layers import (
     Input, Conv1D, MaxPooling1D, Dropout, BatchNormalization, Activation, Add, Flatten, Dense)
 from tensorflow.keras.models import Model
