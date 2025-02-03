@@ -13,7 +13,7 @@ class ECGPyDataset(keras.utils.PyDataset):
         super().__init__(**kwargs)
 
         self.x = df.ECG_ID
-        self.y = df['A']
+        self.y = df['A'].map({0: 1, 1: 0}) #Swap values so that 0 = normal and 1 = abnormal
         self.batch_size = batch_size
 
     # Return number of batches
