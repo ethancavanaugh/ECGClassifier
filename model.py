@@ -1,5 +1,8 @@
 """
-MODEL CODE OBTAINED FROM:
+THIS MODEL CODE WAS OBTAINED FROM:
+https://github.com/antonior92/automatic-ecg-diagnosis
+Licensed under MIT License
+
 Ribeiro, A. H., Ribeiro, M. H., Paixão, G. M., Oliveira, D. M., Gomes, P. R., Canazart, J. A., Ferreira, M. P.,
 Andersson, C. R., Macfarlane, P. W., Meira, W., Schön, T. B., & Ribeiro, A. L. (2020).
 Automatic diagnosis of the 12-lead ECG using a deep neural network. Nature Communications, 11(1).
