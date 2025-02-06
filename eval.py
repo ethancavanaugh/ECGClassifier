@@ -17,6 +17,11 @@ if __name__ == "__main__":
     test_predictions.to_csv('eval/test_predictions.csv', index=False)
     #y_pred = pd.read_csv('eval/test_predictions.csv')['model_output']
 
+    THRESHOLD = .25
+    def apply_threshold(x):
+        return 1 if x >= THRESHOLD else 0
+    y_pred_thresholded = [apply_threshold(x) for x in y_pred]
+    print(metrics.classification_report(y_true, y_pred_thresholded))
 
     #Reciever operating curve
     fpr, tpr, thresholds = metrics.roc_curve(y_true, y_pred)
